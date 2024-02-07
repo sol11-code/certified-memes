@@ -9,15 +9,11 @@ header {
     padding: 1em;
 }
 
-.nameinput {
+#form {
     margin: 1em;
 }
 
-.dropdownlist {
-    margin: 1em;
-}
-
-.template {
+#certificate {
     background-color: gray;
     border: solid 5px black;
     margin: 5px;
@@ -25,6 +21,6 @@ header {
     text-align: center;
 }
 
-.template p {
+#certificate p {
     margin: 3em;
 }
