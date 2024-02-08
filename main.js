@@ -17,7 +17,9 @@ document.addEventListener("DOMContentLoaded", function(){
 
     document.getElementById('form').addEventListener("submit", function (e){
         e.preventDefault();
+
         console.log(e.target);
+
         var formData = new FormData(e.target);
         formData = Object.fromEntries(formData);
 
@@ -25,10 +27,22 @@ document.addEventListener("DOMContentLoaded", function(){
         let textElement = document.getElementById('info');
 
         nameElement.innerText = formData.name;
-        textElement.innerText = formData.info;
+        textElement.innerText = formData.type;
     });
+
+    const todayDate = new Date();
+        let dateElement = document.getElementById('date');
+        dateElement.innertext = todayDate;
 });
 
     function processForm(form) {
 
 }
+
+//current date
+//const date = new Date ();
+//console.log(date);
+
+//const todayDate = new Date();
+    //document.getElementById('date') = todayDate;
+    //dateElement.innerText = formData.date

@@ -15,7 +15,9 @@ header {
 
 #certificate {
     background-color: gray;
-    border: solid 5px black;
+    width: 50em;
+    height: 30em;
+    border: solid 10px black;
     margin: 5px;
     padding: 5px;
     text-align: center;
