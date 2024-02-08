@@ -18,13 +18,20 @@ header {
     width: 50em;
     height: 30em;
     border: solid 10px black;
+}
+
+#cert-info {
     margin: 5px;
-    padding: 5px;
     text-align: center;
 }
 
-#certificate p {
-    margin: 3em;
+#cert-info p {
+    margin: 1em;
+}
+
+#certify p {
+    margin: 10px;
+
 }
 
 .n1 {
