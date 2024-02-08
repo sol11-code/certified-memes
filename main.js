@@ -24,8 +24,8 @@ document.addEventListener("DOMContentLoaded", function(){
         let nameElement = document.getElementById('name');
         let textElement = document.getElementById('info');
 
-        nameElement.innerText = formData.nameInput;
-        textElement.innerText = formData.type;
+        nameElement.innerText = formData.name;
+        textElement.innerText = formData.info;
     });
 });
 
