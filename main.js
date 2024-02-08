@@ -15,6 +15,10 @@ document.addEventListener("DOMContentLoaded", function(){
         infoElement.innerText = e.target.value;
     });
 
+    /*document.getElementById('date').addEventListener('change', function(e){
+        let dateElement = document.getElementById('date');
+    });*/
+
     document.getElementById('form').addEventListener("submit", function (e){
         e.preventDefault();
 
@@ -30,18 +34,36 @@ document.addEventListener("DOMContentLoaded", function(){
         textElement.innerText = formData.type;
     });
 
-    const todayDate = new Date();
-        let dateElement = document.getElementById('date');
-        dateElement.innertext = todayDate;
+    function changeCert(value){
+        let certificate = document.getElementById('certificate');
+        certificate.classList = "";
+        switch(value){
+            case 'A':
+                certificate.classList.add('n1');
+            break;
+            case 'B':
+                certificate.classList.add('n2');
+            break;
+            case 'C':
+                certificate.classList.add('n3');
+            break;
+        }
+    }
+
+    let todayDate = new Date();
+    document.getElementById('date').innerHTML = todayDate;
+
 });
 
     function processForm(form) {
 
 }
 
+document.getElementById("")
+
 //current date
-//const date = new Date ();
-//console.log(date);
+const date = new Date ();
+console.log(date);
 
 //const todayDate = new Date();
     //document.getElementById('date') = todayDate;
