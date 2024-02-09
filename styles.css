@@ -13,7 +13,7 @@ header {
     margin: 1em;
 }
 
-#certificate {
+.certificate {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -34,14 +34,45 @@ header {
     margin: 1em;
 }
 
+
+/*excellent performance*/
 .n1 {
-    color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: end;
+    background-color: gray;
+    width: 50em;
+    height: 30em;
+    color: black;
+    background-color: white;
+    border: solid 10px black;
 }
 
+/*terrifying chillness*/
 .n2 {
-    color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: end;
+    background-color: gray;
+    width: 50em;
+    height: 30em;
+    color: blue;
+    background-color: azure;
+    border: solid 10px blue;
 }
 
+/*wonderful silence*/
 .n3 {
-    color: purple;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: end;
+    background-color: gray;
+    width: 50em;
+    height: 30em;
+    color: gray;
+    background-color: white;
+    border: solid 10px gray;
 }

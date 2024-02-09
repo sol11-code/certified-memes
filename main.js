@@ -11,35 +11,39 @@ document.addEventListener("DOMContentLoaded", function(){
     });
 
     document.getElementById('type').addEventListener('change', function(e){
-        let infoElement = document.getElementById('info');
-        infoElement.innerText = e.target.value;
+        let nameElement = document.getElementById('name');
+        console.log(e);
+        let info = document.getElementById('info');
+        info.innerText = e.target.value;
+        changeCert(e.target.value);
     });
-
-    /*document.getElementById('date').addEventListener('change', function(e){
-        let dateElement = document.getElementById('date');
-    });*/
 
     document.getElementById('form').addEventListener("submit", function (e){
         e.preventDefault();
-
         console.log(e.target);
-
         var formData = new FormData(e.target);
         formData = Object.fromEntries(formData);
 
         let nameElement = document.getElementById('name');
-        let textElement = document.getElementById('info');
-
+        let info = document.getElementById('info');
         nameElement.innerText = formData.name;
-        textElement.innerText = formData.type;
+        info.innerText = formData.type;
     });
 
-    function certColor(selectElem){
-        var i = selectElem.selectedIndex;
-        if (i < 0) {
-            return;
+    function changeCert (value) {
+        let certificate = document.getElementById('certificate');
+        certificate.classList = "";
+        switch (value){
+            case 'excellence':
+                certificate.classList.add('n1');
+            break;
+            case 'chillness':
+                certificate.classList.add('n2');
+            break;
+            case 'silence':
+                certificate.classList.add('n3');
+            break;
         }
-        document.body.style.backgroundColor = selectElem.options[i].value;
     }
 
     let todayDate = new Date();
@@ -54,7 +58,3 @@ document.addEventListener("DOMContentLoaded", function(){
 //current date
 const date = new Date ();
 console.log(date);
-
-//const todayDate = new Date();
-    //document.getElementById('date') = todayDate;
-    //dateElement.innerText = formData.date
