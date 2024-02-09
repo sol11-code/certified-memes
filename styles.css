@@ -13,11 +13,15 @@ header {
     margin: 1em;
 }
 
+#img1 {
+    width: 18%;
+}
+
 .certificate {
     display: flex;
-    flex-direction: column;
+    flex-flow: row wrap;
     justify-content: space-around;
-    align-items: end;
+    align-items: center;
     background-color: gray;
     width: 50em;
     height: 30em;
@@ -27,7 +31,11 @@ header {
 #cert-info p {
     margin: 2em;
     text-align: center;
-    font-size: 20px;
+    font-size: 15px;
+}
+
+#cert-info p:first-child {
+    font-size: 2em;
 }
 
 #certifier {
@@ -38,23 +46,26 @@ header {
 /*excellent performance*/
 .n1 {
     display: flex;
-    flex-direction: column;
+    flex-flow: row wrap;
     justify-content: space-around;
-    align-items: end;
+    align-items: center;
     background-color: gray;
     width: 50em;
     height: 30em;
-    color: black;
-    background-color: white;
+    color: rgb(255, 255, 255);
+    background-image: url("/img/pexels-8730747.jpeg");
+    background-color: rgba(255, 255, 255, 0.129);
+    background-blend-mode: lighten;
+    background-size: cover;
     border: solid 10px black;
 }
 
 /*terrifying chillness*/
 .n2 {
     display: flex;
-    flex-direction: column;
+    flex-flow: row wrap;
     justify-content: space-around;
-    align-items: end;
+    align-items: center;
     background-color: gray;
     width: 50em;
     height: 30em;
@@ -66,9 +77,9 @@ header {
 /*wonderful silence*/
 .n3 {
     display: flex;
-    flex-direction: column;
+    flex-flow: row wrap;
     justify-content: space-around;
-    align-items: end;
+    align-items: center;
     background-color: gray;
     width: 50em;
     height: 30em;
