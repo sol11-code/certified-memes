@@ -34,20 +34,12 @@ document.addEventListener("DOMContentLoaded", function(){
         textElement.innerText = formData.type;
     });
 
-    function changeCert(value){
-        let certificate = document.getElementById('certificate');
-        certificate.classList = "";
-        switch(value){
-            case 'A':
-                certificate.classList.add('n1');
-            break;
-            case 'B':
-                certificate.classList.add('n2');
-            break;
-            case 'C':
-                certificate.classList.add('n3');
-            break;
+    function certColor(selectElem){
+        var i = selectElem.selectedIndex;
+        if (i < 0) {
+            return;
         }
+        document.body.style.backgroundColor = selectElem.options[i].value;
     }
 
     let todayDate = new Date();
@@ -58,8 +50,6 @@ document.addEventListener("DOMContentLoaded", function(){
     function processForm(form) {
 
 }
-
-document.getElementById("")
 
 //current date
 const date = new Date ();

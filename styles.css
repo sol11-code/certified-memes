@@ -14,24 +14,24 @@ header {
 }
 
 #certificate {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: end;
     background-color: gray;
     width: 50em;
     height: 30em;
     border: solid 10px black;
 }
 
-#cert-info {
-    margin: 5px;
-    text-align: center;
-}
-
 #cert-info p {
-    margin: 1em;
+    margin: 2em;
+    text-align: center;
+    font-size: 20px;
 }
 
-#certify p {
-    margin: 10px;
-
+#certifier {
+    margin: 1em;
 }
 
 .n1 {
