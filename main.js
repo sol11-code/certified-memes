@@ -18,6 +18,11 @@ document.addEventListener("DOMContentLoaded", function(){
         changeCert(e.target.value);
     });
 
+    document.getElementById('type').addEventListener('change', function(e){
+        let title = document.getElementById('title');
+        title.innerText = e.target.value;
+    })
+
     document.getElementById('form').addEventListener("submit", function (e){
         e.preventDefault();
         console.log(e.target);
@@ -26,8 +31,10 @@ document.addEventListener("DOMContentLoaded", function(){
 
         let nameElement = document.getElementById('name');
         let info = document.getElementById('info');
+        let title = document.getElementById('title');
         nameElement.innerText = formData.name;
         info.innerText = formData.type;
+        title.innerText = formData.type;
     });
 
     function changeCert (value) {
@@ -46,8 +53,13 @@ document.addEventListener("DOMContentLoaded", function(){
         }
     }
 
-    let todayDate = new Date();
+    let todayDate = new Date().toLocaleDateString('en-us',{weekday:"long", year:"numeric", month:"numeric", day:"numeric"});
     document.getElementById('date').innerHTML = todayDate;
+
+    let printCert = document.getElementById('print');
+    printCert.addEventListener('click', function(e){
+        window.print();
+    })
 
 });
 
