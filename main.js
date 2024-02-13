@@ -18,9 +18,17 @@ document.addEventListener("DOMContentLoaded", function(){
         changeCert(e.target.value);
     });
 
+    //change certificate logo and title
     document.getElementById('type').addEventListener('change', function(e){
         let title = document.getElementById('title');
         title.innerText = e.target.value;
+        if(this.value === "excellence"){
+            document.getElementById("imgCert").src = "img/certified.png";
+        } else if (this.value === "chillness") {
+            document.getElementById("imgCert").src = "img/satisfaction.webp";
+        } else {
+            document.getElementById("imgCert").src = "img/quality_control.jpg";
+        };
     })
 
     document.getElementById('form').addEventListener("submit", function (e){
@@ -37,6 +45,7 @@ document.addEventListener("DOMContentLoaded", function(){
         title.innerText = formData.type;
     });
 
+    //change certificate design
     function changeCert (value) {
         let certificate = document.getElementById('certificate');
         certificate.classList = "";
@@ -53,9 +62,11 @@ document.addEventListener("DOMContentLoaded", function(){
         }
     }
 
+    //set today's date
     let todayDate = new Date().toLocaleDateString('en-us',{weekday:"long", year:"numeric", month:"numeric", day:"numeric"});
     document.getElementById('date').innerHTML = todayDate;
 
+    //add print function
     let printCert = document.getElementById('print');
     printCert.addEventListener('click', function(e){
         window.print();

@@ -20,6 +20,7 @@
         <input type="text" name="name" id="nameInput" size="10">
 
         <select name="type" id="type">
+            <option hidden value="">Choose certification</option>
             <option value="excellence">Excellence</option>
             <option value="chillness">Chillness</option>
             <option value="silence">Silence</option>
@@ -32,12 +33,13 @@
 
     <div class="certificate" id="certificate">
         <div id="cert-info">
-            <p>CERTIFICATE OF <span id="title"COMPLETION>-</span></p>
+            <p>CERTIFICATE OF <span id="title">-</span></p>
             <p>This certificate is proudly and excitedly presented to:</p>
             <p id="name">Name</p>
+            <hr/>
             <p>This certificate is awarded for <span id="info">-</span> on <span id="date">-</span>.</p>
         </div>
-        <img id="img1" src="img/certified-hq-39465.png">
+        <img id="imgCert" src="img/certified-hq-39465.png">
         <div id="certifier">
             <p>Certified Certifier</p>
             <p>Definitely</p>

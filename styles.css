@@ -13,7 +13,7 @@ header {
     margin: 1em;
 }
 
-#img1 {
+#imgCert {
     width: 18%;
 }
 
@@ -41,7 +41,11 @@ header {
 }
 
 #name {
-    text-decoration: underline;
+    color: black;
+}
+
+hr {
+    border-top: 2px solid black;
 }
 
 #certifier {
